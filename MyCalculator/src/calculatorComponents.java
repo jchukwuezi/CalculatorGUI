@@ -14,42 +14,61 @@ import java.awt.*;
 public class calculatorComponents {
 //Note: anything that has to be handled in the outer class needs to be created here and declared in the constructor
 	JTextField calculationField;
-	
+	JButton backspace_button;
+	JButton clear_button;
+	JButton erase_button;
+	JButton button_1;
+	JButton button_2;
+	JButton button_3;
+	JButton button_4;
+	JButton button_5;
+	JButton button_6;
+
+	JButton button_7;
+	JButton button_8;
+	JButton button_9;;
+	JButton button_0;
+	JButton plus_button;
+	JButton divide_button;
+	JButton multiply_button;
+	JButton minus_button;
+	JButton decimal_button;
+	JButton equals_button;
 
 	public calculatorComponents() { // constructor to create components
 		// creating the frame and panel and setting the layout
 		JFrame f = new JFrame("Chukwuezi Calculator");
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(new MigLayout());
-		mainPanel.setLayout(new MigLayout());
 		f.setSize(500, 500);
 		f.add(mainPanel);
 
 		// buttons on the calculator
-		JButton backspace_button = new JButton("<-");
-		JButton clear_button = new JButton("C");
-		JButton erase_button = new JButton("CE");
-		JButton button_1 = new JButton("1");
-		JButton button_2 = new JButton("2");
-		JButton button_3 = new JButton("3");
-		JButton button_4 = new JButton("4");
-		JButton button_5 = new JButton("5");
-		JButton button_6 = new JButton("6");
+		 backspace_button = new JButton("<-");
+		 clear_button = new JButton("C");
+		 erase_button = new JButton("CE");
+		 button_1 = new JButton("1");
+		 button_2 = new JButton("2");
+		 button_3 = new JButton("3");
+		 button_4 = new JButton("4");
+		 button_5 = new JButton("5");
+		 button_6 = new JButton("6");
 
-		JButton button_7 = new JButton("7");
-		JButton button_8 = new JButton("8");
-		JButton button_9 = new JButton("9");
-		JButton button_0 = new JButton("0");
-		JButton plus_button = new JButton("+");
-		JButton divide_button = new JButton("/");
-		JButton multiply_button = new JButton("*");
-		JButton minus_button = new JButton("-");
-		JButton decimal_button = new JButton(".");
-		JButton equals_button = new JButton("=");
-
+		button_7 = new JButton("7");
+		button_8 = new JButton("8");
+		button_9 = new JButton("9");
+		button_0 = new JButton("0");
+		plus_button = new JButton("+");
+		divide_button = new JButton("/");
+		multiply_button = new JButton("*");
+		minus_button = new JButton("-");
+		decimal_button = new JButton(".");
+		equals_button = new JButton("=");
+        
 		// text field to hold the numbers
-	    calculationField = new JTextField(30);
+	    calculationField = new JTextField(20);
 		calculationField.setEditable(false);
+	
 
 		// Putting a border around this text field
 		Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
@@ -115,6 +134,7 @@ public class calculatorComponents {
 		equals_button.addActionListener(l);
 
 	    f.setVisible(true);
+	    
 
 	}
 
